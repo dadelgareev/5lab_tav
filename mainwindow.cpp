@@ -4,6 +4,7 @@
 #include <QString> // Добавляем заголовочный файл <QString> для использования QString
 #include "taskwindow2.h"
 #include "taskwindow3.h"
+#include "taskwindow4.h"
 
 string sdnf;
 
@@ -48,6 +49,14 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
     taskwindow3 task_window(nullptr,qsdnf);
+    task_window.setModal(true);
+    task_window.exec();
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    taskwindow4 task_window(nullptr,sdnf);
     task_window.setModal(true);
     task_window.exec();
 }
